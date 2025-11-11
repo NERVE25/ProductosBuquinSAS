@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Productos - Productos Buquin SAS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Cabecera estándar -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="img/logob.jpg" alt="Logo Productos Buquin SAS"></a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="trabaja-con-nosotros.html">Trabaja con Nosotros</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Minimalista -->
+    <!-- Hero de la Página -->
+<section class="page-hero hero-comprar"> <!-- ★★★ AÑADE ESTA CLASE ★★★ -->
+    <div class="container">
+        <h1>Encuentra Nuestros Productos</h1>
+        <p class="hero-subtitle">Descubre nuestras líneas de sabor y contacta a tu distribuidor más cercano.</p>
+    </div>
+</section>
+        <!-- Sección de Productos Resumidos -->
+        <section class="product-summary-section section-padding">
+            <div class="container">
+                <h2 class="text-center" style="margin-bottom: 3rem;">Nuestras Líneas de Sabor</h2>
+                <div class="summary-grid">
+                    <!-- Tarjeta 1: Salsas Clásicas -->
+                    <div class="summary-card">
+                        <i class="fas fa-pepper-hot summary-icon"></i>
+                        <h3>Salsas Clásicas</h3>
+                        <p>El sabor tradicional que no puede faltar: Tomate, BBQ, Picante y Rosada.</p>
+                    </div>
+                    <!-- Tarjeta 2: Siropes -->
+                    <div class="summary-card">
+                        <i class="fas fa-bottle-droplet summary-icon"></i>
+                        <h3>Siropes Dulces</h3>
+                        <p>El toque perfecto de dulzura con nuestro inconfundible Sirope sabor a Miel.</p>
+                    </div>
+                    <!-- Tarjeta 3: Salsas Especiales -->
+                    <div class="summary-card">
+                        <i class="fas fa-seedling summary-icon"></i>
+                        <h3>Salsas Especiales</h3>
+                        <p>Para preparaciones únicas: dale un giro a tus platos con nuestras Salsas Negra y Soya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección para Encontrar Distribuidor -->
+        <section class="distributor-locator-section section-padding" style="background-color: #f8f9fa;">
+            <div class="container text-center">
+                <h2>Contacta a tu Distribuidor</h2>
+                <p class="subtitle" style="max-width: 700px; margin: 1rem auto 3rem;">Tenemos presencia a nivel nacional. Selecciona tu ciudad para consultar por el distribuidor más cercano y realizar tu pedido.</p>
+                
+                <div class="distributor-grid">
+                    <!-- ★★★ EDITA ESTAS CIUDADES SEGÚN TU COBERTURA ★★★ -->
+                    <!-- Opción 1: Bogotá -->
+                    <div class="distributor-location-card">
+                        <h3>Bogotá D.C.</h3>
+                        <p>Consulta por nuestros socios en la capital del país.</p>
+                        <a href="https://wa.me/573176591699?text=Hola,%20me%20gustaría%20saber%20cuál%20es%20el%20distribuidor%20de%20Productos%20Buquin%20en%20Bogotá." target="_blank" class="btn">Consultar por WhatsApp</a>
+                    </div>
+                    <!-- Opción 2: Medellín -->
+                    <div class="distributor-location-card">
+                        <h3>Eje cafetero</h3>
+                        <p>Encuentra nuestros productos en el Valle de Aburrá.</p>
+                        <a href="https://wa.me/573176591699?text=Hola,%20me%20gustaría%20saber%20cuál%20es%20el%20distribuidor%20de%20Productos%20Buquin%20en%20Medellín." target="_blank" class="btn">Consultar por WhatsApp</a>
+                    </div>
+                    <!-- Opción 3: Cali -->
+                    <div class="distributor-location-card">
+                        <h3>Santander</h3>
+                        <p>El sabor de Buquin también está en la sucursal del cielo.</p>
+                        <a href="https://wa.me/573176591699?text=Hola,%20me%20gustaría%20saber%20cuál%20es%20el%20distribuidor%20de%20Productos%20Buquin%20en%20Cali." target="_blank" class="btn">Consultar por WhatsApp</a>
+                    </div>
+                    <!-- Opción 4: Otra Región -->
+                    <div class="distributor-location-card">
+                        <h3>Otra Región</h3>
+                        <p>¿No ves tu ciudad? Consúltanos directamente.</p>
+                        <a href="https://wa.me/573176591699?text=Hola,%20me%20gustaría%20saber%20si%20tienen%20distribuidor%20en%20[Escribe tu ciudad aquí]." target="_blank" class="btn">Consulta General</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+   <!-- ======================= INICIA EL FOOTER COMPLETO ======================= -->
+<footer class="footer">
+    <div class="contact-details">
+        <!-- Item 1: Teléfono y WhatsApp -->
+        <div class="contact-item">
+            <h3>Teléfono y WhatsApp</h3>
+            <a href="https://wa.me/573176591699" class="contact-info-line" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>317 659 1699</span>
+            </a>
+        </div>
+
+        <!-- Item 2: Horario de Atención -->
+        <div class="contact-item">
+            <h3>Horario de Atención</h3>
+            <div class="contact-info-line">
+                <i class="fa-regular fa-clock"></i>
+                <span>Lunes a Viernes: 8:00 AM - 5:00 PM<br>Sábados: 9:00 AM - 1:00 PM</span>
+            </div>
+        </div>
+
+        <!-- Item 3: Ubicación -->
+        <div class="contact-item">
+            <h3>Ubicación</h3>
+            <a href="https://maps.app.goo.gl/j5njSYXCNCiJFV2X6" target="_blank" class="contact-info-line">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Transversal 18i 5-05,<br>Soacha, Colombia</span>
+            </a>
+        </div>
+
+        <!-- Item 4: Redes Sociales -->
+        <div class="contact-item">
+            <h3>Redes Sociales</h3>
+            <div class="contact-info-line social-group">
+                <a href="https://instagram.com/PRODUCTOSBUQUIN" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com/SALSASPRODUCTOSBUQUINS.A.S" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ======================= BOTÓN FLOTANTE DE WHATSAPP ======================= -->
+<a href="https://wa.me/573176591699" class="whatsapp-flotante" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<!-- =================================================================================== -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

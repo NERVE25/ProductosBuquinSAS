@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros - Productos Buquin SAS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- ... otras etiquetas como <title> y <link> a tu css ... -->
+    
+    <!-- ★★★ AÑADE ESTA LÍNEA PARA LOS ÍCONOS ★★★ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- ... el resto de tu página ... -->
+
+    <!-- REUTILIZA EL MISMO HEADER DE index.html CAMBIANDO LA CLASE 'active' -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logob.jpg" alt="Logo Productos Buquin SAS">
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="trabaja-con-nosotros.html" class="active">Trabaja con Nosotros</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section section-padding">
+            <div class="container">
+                <h1 class="text-center">Únete a nuestro equipo</h1>
+                <p class="text-center subtitle">Si eres una persona apasionada por la calidad y la innovación, nos encantaría conocerte.</p>
+
+                <form class="contact-form" action="#" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono de Contacto</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">¿Por qué quieres trabajar en Buquin SAS?</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv">Adjunta tu Hoja de Vida (CV)</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    <button type="submit" class="btn">Enviar Postulación</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- REUTILIZA EL MISMO FOOTER DE index.html -->
+    <footer class="footer">
+       <!-- ======================= SECCIÓN DE CONTACTO (NUEVA VERSIÓN) ======================= -->
+<div class="contact-details">
+    <!-- Item 1: Teléfono y WhatsApp -->
+    <div class="contact-item">
+        <h3>Teléfono y WhatsApp</h3>
+        <a href="https://wa.me/573176591699" class="contact-info-line" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>317 659 1699</span>
+        </a>
+    </div>
+
+    <!-- Item 2: Horario de Atención -->
+    <div class="contact-item">
+        <h3>Horario de Atención</h3>
+        <div class="contact-info-line">
+            <i class="fa-regular fa-clock"></i>
+            <span>Lunes a Viernes: 8:00 AM - 5:00 PM<br>Sábados: 9:00 AM - 1:00 PM</span>
+        </div>
+    </div>
+
+    <!-- Item 3: Ubicación -->
+    <div class="contact-item">
+        <h3>Ubicación</h3>
+        <!-- ★★★ INSTRUCCIONES IMPORTANTES ★★★
+            1. Ve a Google Maps y busca tu empresa.
+            2. Haz clic en "Compartir" y luego en "Insertar un mapa".
+            3. Copia el enlace que aparece en el atributo 'src' (empieza con https://www.google.com/maps/embed...).
+            4. REEMPLAZA EL ENLACE DE EJEMPLO DE ABAJO CON EL TUYO.
+        -->
+        <a href="https://maps.app.goo.gl/j5njSYXCNCiJFV2X6" target="_blank" class="contact-info-line">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Transversal 18i 5-05,<br>Soacha, Colombia</span>
+        </a>
+    </div>
+
+    <!-- Item 4: Redes Sociales -->
+    <div class="contact-item">
+        <h3>Redes Sociales</h3>
+        <div class="contact-info-line social-group">
+            <a href="https://instagram.com/PRODUCTOSBUQUIN" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/SALSASPRODUCTOSBUQUINS.A.S" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+</div>
+<!-- =================================================================================== -->
+   </footer>
+
+<!-- ======================= BOTÓN FLOTANTE DE WHATSAPP ======================= -->
+<a href="https://wa.me/573176591699" class="whatsapp-flotante" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<!-- =================================================================================== -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

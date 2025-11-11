@@ -1,0 +1,1336 @@
+/* === CONFIGURACIÓN GENERAL Y VARIABLES === */
+:root {
+    --color-rojo: #9E2A2B;
+    --color-blanco: #FFFFFF;
+    --color-dorado: #D4B254;
+    --color-naranja: #D06C4B;
+    --color-verde-oscuro: #356338;
+    --color-texto: #333;
+    --font-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+    text-align: justify;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #D4B254;
+}
+
+h1 { font-size: 3rem; font-weight: 900; }
+h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; }
+
+/* === HEADER Y NAVEGACIÓN === */
+.header {
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-verde-oscuro);
+    font-weight: 700;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--color-rojo);
+    border-bottom-color: var(--color-rojo);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-rojo);
+}
+
+/* === BOTONES === */
+.btn, .btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-blanco);
+}
+
+.btn:hover {
+    background-color: var(--color-verde-oscuro);
+}
+
+.btn-secondary {
+    background-color: var(--color-dorado);
+    color: var(--color-verde-oscuro);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-naranja);
+}
+
+/* === SECCIÓN HERO (INICIO) === */
+.hero {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--color-blanco);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+/* === SECCIONES DE CONTENIDO === */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-preview .about-image img {
+    width: 100%;
+    height: 400px; /* Mantenemos la altura para la consistencia del layout */
+    object-fit: contain; /* <-- ESTE ES EL CAMBIO PRINCIPAL */
+    background-color: #ffffff; /* Opcional: fondo para el espacio que sobre */
+    border-radius: 10px;
+}
+    .about-image-b img {
+        width: 100%;
+        height: 400px; /* Mantenemos la altura para la consistencia del layout */
+        object-fit: contain; /* <-- ESTE ES EL CAMBIO PRINCIPAL */
+        background-color: #ffffff; /* Opcional: fondo para el espacio que sobre */
+        border-radius: 10px;
+    }
+/* === VISTA PREVIA DE PRODUCTOS === */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background-color: var(--color-blanco);
+    border: 1px solid #b02b2b;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* <--- CAMBIA 'cover' POR 'contain' */
+    background-color: #ffffff; /* Opcional: añade un color de fondo suave para el espacio sobrante */
+}
+.product-card h3 {
+    padding: 1.5rem;
+    color: var(--color-verde-oscuro);
+}
+
+/* === FORMULARIOS (TRABAJA CON NOSOTROS) === */
+.form-section .subtitle {
+    max-width: 600px;
+    margin: 1rem auto 3rem;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #abaaaa;
+    border-radius: 5px;
+    font-family: var(--font-principal);
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-blanco);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-media a {
+    color: var(--color-dorado);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+/* === RESPONSIVE (MENÚ MÓVIL) === */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 80px; /* Altura del header */
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--color-blanco);
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 3rem;
+    }
+
+    .nav-menu a {
+        font-size: 1.5rem;
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+/* === ESTILOS PÁGINAS INTERNAS (Nosotros, Productos) - VERSIÓN AJUSTADA === */
+.page-hero {
+    /* --- 1. Tamaño y Alineación --- */
+    min-height: 200px; /* ★★★ Define una altura fija y más pequeña, por ejemplo 250px ★★★ */
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Importante para que no se salga nada */
+
+    /* ★★★ ¡EL CAMBIO CLAVE ESTÁ AQUÍ! ★★★ */
+    background-size: 100% auto; /* Ajusta la imagen al 100% del ANCHO y la altura se calcula sola */
+    background-position: center center;
+    background-repeat: no-repeat; /* Evita que la imagen se repita si es muy corta */
+    
+    /* --- 3. El Color del Texto --- */
+    color: var(--color-blanco);
+}
+
+/* El estilo del H1 se mantiene igual */
+.page-hero h1 {
+    color: var(--color-blanco);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.mission-vision-section p {
+    max-width: 800px;
+    margin: 0.5rem auto 0;
+    font-size: 1.1rem;
+}
+
+/* === ESTILOS CATÁLOGO DE PRODUCTOS === */
+.category-title {
+    border-bottom: 3px solid var(--color-rojo);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.product-card-full {
+    background-color: var(--color-blanco);
+    border: 1px solid #b02b2b;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-full img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product-card-full .product-info {
+    padding: 1.5rem;
+}
+
+.product-card-full h3 {
+    color: var(--color-verde-oscuro);
+}
+
+.product-card-full p {
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.product-card-full ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+/* === ESTILOS PARA ÍCONOS DE CONTACTO Y SOCIALES === */
+
+/* --- Estilos para los íconos del FOOTER (oscuro) --- */
+.footer .social-media a {
+    color: var(--color-dorado); /* Color del ícono */
+    font-size: 1.8rem; /* Tamaño del ícono */
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .social-media a:hover {
+    color: var(--color-blanco); /* Color al pasar el mouse */
+}
+
+/* Elimina el párrafo de contacto del footer si ya no lo necesitas */
+.footer .footer-content p:last-child {
+    display: none; /* Oculta el último párrafo si ya moviste el teléfono */
+}
+/* Reajusta el copyright para que quede solo */
+.footer .footer-content p:first-child {
+    margin: 0;
+}
+
+
+/* --- Estilos para los íconos de la SECCIÓN DE CONTACTO (clara) --- */
+.contact-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-rojo);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-icon-link:hover {
+    color: var(--color-verde-oscuro);
+}
+
+.contact-icon-link i {
+    font-size: 2rem; /* Tamaño del ícono */
+}
+
+.contact-icon-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+/* === ESTILOS PARA EL SLIDER DE PRODUCTOS === */
+
+.slider-container {
+    position: relative; /* Esencial para posicionar las flechas */
+    width: 100%;
+    overflow: hidden; /* Oculta los slides que no están activos */
+}
+
+.slider-wrapper {
+    display: flex; /* Coloca los slides uno al lado del otro */
+    transition: transform 0.5s ease-in-out; /* La animación del deslizamiento */
+}
+
+.slide {
+    width: 100%; /* Cada slide ocupa el 100% del contenedor */
+    flex-shrink: 0; /* Evita que los slides se encojan */
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px; /* Mantenemos la altura consistente */
+    object-fit: contain; /* Para que la imagen se vea completa */
+    background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Re-estiliza el product-info para el slide */
+.slide .product-info {
+    padding: 1.5rem;
+}
+
+.slide .product-presentation {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-rojo);
+    margin-top: 0;
+}
+
+.slide .product-description {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+/* Estilos para las flechas de navegación */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: var(--color-rojo);
+}
+
+.slider-arrow.prev {
+    left: 15px;
+}
+
+.slider-arrow.next {
+    right: 15px;
+}
+/* === ESTILO PARA FONDO DESVANECIDO (MÉTODO ALTERNATIVO) === */
+/* === ESTILO PARA FONDO DESVANECIDO EN SECCIONES === */
+
+.fondo-desvanecido {
+    position: relative; /* Esencial para que la capa de fondo se posicione correctamente */
+    z-index: 1;         /* Asegura que el contenido esté en un contexto de apilamiento */
+    overflow: hidden;   /* Evita que la imagen se salga si hay bordes redondeados */
+}
+
+/* Creamos una "pseudo-capa" que se pondrá DETRÁS del contenido */
+.fondo-desvanecido::before {
+    content: ''; /* Los pseudo-elementos siempre necesitan 'content' */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* --- ★★★ AQUÍ ESTÁ LA MAGIA ★★★ --- */
+    
+    /* 1. Elige tu imagen de fondo */
+    background-image: url('../img/red-social.jpg'); /* ¡CAMBIA ESTO POR EL NOMBRE DE TU IMAGEN! */
+    
+    /* 2. Configura cómo se muestra la imagen */
+    background-size: cover;      /* La imagen cubre todo el espacio sin deformarse */
+    background-position: center; /* Centra la imagen */
+    
+    /* 3. El efecto "desvanecido" (ajusta este valor a tu gusto) */
+    opacity: 0.9; /* Un valor bajo (0.1 = 10% de opacidad). Prueba con 0.05, 0.15, etc. */
+
+    /* 4. Coloca la capa detrás del texto y otros elementos */
+    z-index: -1; 
+}
+/* === ESTILOS ADICIONALES PARA SECCIÓN DE CONTACTO MINIMALISTA === */
+
+/* Ajusta el grid para que quepan 4 elementos de forma elegante */
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* El contenedor para una línea de información (icono + texto) */
+.contact-info-line {
+    display: flex;
+    align-items: center; /* Centra verticalmente el icono con el texto */
+    gap: 12px; /* Espacio entre el icono y el texto */
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+
+/* Estilo para los iconos dentro de la línea */
+.contact-info-line i {
+    font-size: 1.8rem;
+    color: var(--color-blanco); /* Usa el color principal de la marca */
+    transition: color 0.3s ease;
+}
+
+/* Estilo para el texto */
+.contact-info-line span {
+    font-size: 1rem;
+    line-height: 1.5; /* Mejora el espaciado si hay saltos de línea */
+}
+
+/* Efecto hover cuando la línea es un enlace (como la ubicación o el teléfono) */
+a.contact-info-line:hover i {
+    color: var(--color-verde-oscuro); /* Cambia el color del icono al pasar el mouse */
+}
+
+a.contact-info-line:hover span {
+    text-decoration: underline; /* Subraya el texto para indicar que es un enlace */
+}
+
+/* Estilos específicos para el grupo de redes sociales */
+.contact-info-line.social-group {
+    justify-content: flex-start; /* Alinea los iconos a la izquierda */
+}
+
+.contact-info-line.social-group a i {
+    font-size: 2.2rem; /* Iconos un poco más grandes */
+}
+/* === ESTILOS PARA LA SECCIÓN DE LLAMADA A LA ACCIÓN (CTA) === */
+
+.cta-section {
+    background-color: #f8f9fa; /* Un fondo gris muy sutil para diferenciar la sección */
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 2rem; /* Espacio entre los dos cajones */
+}
+
+/* Estilo principal para cada cajón */
+.cta-box {
+    background-color: var(--color-blanco);
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Bordes más redondeados para un look suave */
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.cta-box:hover {
+    transform: translateY(-10px); /* El cajón se eleva un poco */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-dorado); /* El borde cambia a dorado */
+}
+
+/* Estilo para los iconos grandes */
+.cta-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo para el título de cada cajón (tipografía elegante) */
+.cta-title {
+    font-size: 2rem; /* Tamaño grande y legible */
+    font-weight: 700; /* Letra en negrita con Poppins */
+    color: var(--color-verde-oscuro);
+    margin-bottom: 1rem;
+}
+
+/* Estilo para la descripción */
+.cta-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Estilos para los botones (usando tus colores corporativos) */
+.btn-distribuidor {
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-blanco);
+}
+.btn-distribuidor:hover {
+    background-color: #243825; /* Un verde un poco más oscuro */
+}
+
+.btn-comprar {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+}
+.btn-comprar:hover {
+    background-color: #802223; /* Un rojo un poco más oscuro */
+}
+
+
+/* --- Adaptación para Móviles --- */
+@media (max-width: 768px) {
+    .cta-container {
+        grid-template-columns: 1fr; /* En pantallas pequeñas, un cajón se pone encima del otro */
+    }
+
+    .cta-title {
+        font-size: 1.8rem; /* Ajustamos el tamaño del título para móviles */
+    }
+}
+/* === ESTILOS PARA LA PÁGINA DE DISTRIBUIDORES === */
+
+.benefits-section {
+    background-color: var(--color-blanco);
+}
+
+.benefits-grid {
+    display: grid;
+    /* En pantallas grandes, 4 columnas. En medianas, 2. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    color: var(--color-rojo);
+    margin-bottom: 1.5rem;
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    color: var(--color-verde-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+/* === ESTILOS PERSONALIZADOS PARA EL HERO DE LA PÁGINA DE DISTRIBUIDORES === */
+
+.hero-distribuidores {
+    /* 1. Imagen de fondo y velo oscuro para profesionalismo */
+    background-image: 
+        /* Velo más oscuro para dar un tono serio */
+        linear-gradient(rgba(10, 20, 30, 0.7), rgba(10, 20, 30, 0.7)),
+        /* ¡Reemplaza con tu imagen de fondo para negocios! */
+        url('../img/negocios-fondo');
+    
+    background-size: cover;
+    background-position: center;
+    min-height: 45vh; /* Le damos una altura generosa */
+    padding: 4rem 0; /* Más espacio interno */
+}
+
+/* 2. Estilo para el título principal: Más elegante */
+.hero-distribuidores h1 {
+    color: var(--color-dorado); /* ★ El dorado transmite calidad y exclusividad */
+    font-weight: 900; /* La tipografía Poppins más gruesa para impacto */
+    font-size: 3.5rem; /* Un poco más grande */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+    margin: 0;
+}
+
+/* 3. Estilo para el subtítulo: Letra más clara y legible */
+.hero-distribuidores .hero-subtitle {
+    color: var(--color-blanco);
+    font-size: 1.3rem;
+    font-weight: 400; /* Letra más ligera para que no compita con el título */
+    max-width: 700px;
+    margin: 1rem auto 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+
+/* --- Adaptación para Móviles --- */
+@media (max-width: 768px) {
+    .hero-distribuidores h1 {
+        font-size: 2.8rem; /* Ajustamos el tamaño del título para móviles */
+    }
+
+    .hero-distribuidores .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+/* === ESTILOS PARA EL NUEVO DISEÑO DEL FORMULARIO === */
+
+/* Quitamos el fondo gris de la sección principal */
+.form-section {
+    background-color: var(--color-blanco);
+}
+
+/* Creamos el grid de dos columnas */
+.form-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* La columna del form es 1.5 veces más ancha */
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* Estilos para la columna de información (izquierda) */
+.form-info-col .form-info-title {
+    font-size: 2.5rem;
+    color: var(--color-verde-oscuro);
+    line-height: 1.3;
+}
+.form-info-col p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 1.5rem;
+}
+.form-info-contact {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-left: 5px solid var(--color-dorado);
+}
+.form-info-contact p {
+    margin-top: 0.5rem;
+}
+
+/* Estilos para la "caja" del formulario */
+.contact-form {
+    background-color: var(--color-blanco);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra más pronunciada */
+}
+
+/* Título dentro del formulario */
+.form-title-header {
+    text-align: center;
+    color: var(--color-rojo);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 992px) {
+    .form-layout-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+    .form-info-col {
+        text-align: center;
+    }
+}
+/* === ESTILOS PARA LA PÁGINA 'QUIERO COMPRAR' === */
+
+/* --- Sección de Productos Resumidos --- */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.summary-card {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.summary-icon {
+    font-size: 3rem;
+    color: var(--color-rojo);
+    margin-bottom: 1.5rem;
+}
+
+.summary-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-verde-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.summary-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Sección para Localizar Distribuidores --- */
+.distributor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.distributor-location-card {
+    background-color: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    justify-content: space-between; /* Empuja el botón hacia abajo */
+}
+
+.distributor-location-card h3 {
+    font-size: 1.6rem;
+    color: var(--color-rojo);
+}
+
+.distributor-location-card p {
+    color: #555;
+    margin: 0.5rem 0 1.5rem 0; /* Espacio arriba y abajo */
+    flex-grow: 1; /* Permite que el párrafo crezca y empuje el botón */
+}
+
+.distributor-location-card .btn {
+    width: 100%;
+    display: block; /* Para que ocupe todo el ancho */
+    background-color: var(--color-verde-oscuro);
+}
+
+.distributor-location-card .btn:hover {
+    background-color: #243825;
+}
+/* === ESTILOS INDEPENDIENTES PARA EL HERO DE 'QUIERO COMPRAR' (ESTILO DISTRIBUIDOR) === */
+
+.hero-comprar {
+    /* 1. Imagen de fondo y velo oscuro */
+    background-image: 
+        /* ¡Reemplaza con la imagen de fondo para esta página! */
+        url('../img/red-social.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    min-height: 45vh;
+    padding: 4rem 0;
+}
+
+/* 2. Estilo para el título principal: Dorado, igual que en Distribuidores */
+.hero-comprar h1 {
+    color: var(--color-dorado); /* ★ Color dorado para consistencia */
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+/* 3. Estilo para el subtítulo: Blanco, igual que en Distribuidores */
+.hero-comprar .hero-subtitle {
+    color: var(--color-blanco);
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 1rem auto 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
+}
+
+/* --- Adaptación para Móviles (específica para esta sección) --- */
+@media (max-width: 768px) {
+    .hero-comprar h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-comprar .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+/* ========================================= */
+/*      ESTILOS BOTÓN FLOTANTE WHATSAPP      */
+/* ========================================= */
+.whatsapp-flotante {
+  position: fixed; /* Lo deja fijo en la pantalla */
+  width: 60px;
+  height: 60px;
+  bottom: 30px; /* Distancia desde abajo */
+  right: 30px;  /* Distancia desde la derecha */
+  background-color: #25D366; /* Color de WhatsApp */
+  color: #FFF; /* Color del ícono (blanco) */
+  border-radius: 50%; /* Lo hace un círculo */
+  text-align: center;
+  font-size: 30px; /* Tamaño del ícono */
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000; /* Se asegura que esté por encima de todo */
+  text-decoration: none; /* ★★★ ESTA LÍNEA QUITA EL SUBRAYADO ★★★ */
+  
+  /* Para centrar el ícono perfectamente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Transición suave para el efecto hover */
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.whatsapp-flotante:hover {
+  transform: scale(1.1); /* Agranda un poco el botón */
+  color: #FFF; /* Asegura que el ícono siga blanco al pasar el mouse */
+}
+/* ========================================= */
+/*      ESTILOS PÁGINA DETALLE DE PRODUCTO   */
+/* ========================================= */
+
+.presentations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.presentation-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-card img {
+    max-width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: contain; /* Asegura que la imagen quepa sin deformarse */
+    margin-bottom: 1.5rem;
+}
+
+.presentation-card h3 {
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+}
+
+.presentation-card p {
+    flex-grow: 1; /* Empuja la tabla nutricional hacia abajo */
+    margin-bottom: 1.5rem;
+}
+
+.nutritional-info {
+    margin-top: auto; /* Empuja este bloque al fondo de la tarjeta */
+    text-align: left;
+}
+
+.nutritional-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.nutritional-info td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.nutritional-info td:first-child {
+    font-weight: bold;
+}
+a.product-link-card {
+    text-decoration: none;
+    color: inherit;
+}
+/* ========================================= */
+/*      ESTILOS PARA ENLACE DENTRO DE SLIDER */
+/* ========================================= */
+.slide-link {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del texto para que no se vea azul */
+    display: block; /* Permite que el enlace ocupe todo el espacio del slide */
+}
+/* ========================================= */
+/*      ESTILOS PARA IMAGEN DE PRODUCTO      */
+/* ========================================= */
+.product-intro .about-image img {
+    width: 100%; /* La imagen ocupará el 100% del ancho de su columna */
+    height: auto; /* La altura se ajustará automáticamente */
+    max-height: 450px; /* Un alto máximo para que no sea demasiado grande */
+    object-fit: contain; /* Se asegura que toda la imagen sea visible sin deformarse */
+}
+/* ================================================= */
+/*      ESTILOS DEFINITIVOS PARA HERO DE PRODUCTO    */
+/* ================================================= */
+
+/* Reglas base para todos los heroes de producto */
+
+.product-hero {
+    width: 100%;
+    color: #fff;
+    padding: 2rem 1rem; /* Reducimos el padding porque la altura la controlará min-height */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    
+    /* --- Propiedades de fondo --- */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* ★★★ AQUÍ ESTÁ LA MAGIA ★★★ */
+    min-height: 40vh; /* Altura mínima será el 40% de la altura de la ventana del navegador */
+    display: flex; /* Activa el modelo de caja flexible */
+    flex-direction: column; /* Apila los elementos (título y subtítulo) uno sobre otro */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Asegura que el texto esté centrado si ocupa varias líneas */
+}
+/* Fondo específico para la página de Tomate */
+.hero-tomate {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../img/tomate2.jpg');
+}
+
+/* (PARA EL FUTURO) Fondo específico para la página de BBQ */
+/*
+.hero-bbq {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/fondo-bbq.jpg');
+}
+*/
+/* ================================================= */
+/*      FONDO ESPECÍFICO PARA PÁGINA DE BBQ          */
+/* ================================================= */
+
+.hero-bbq {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/fondobbq.jpg');
+}
+/* ================================================= */
+/*      FONDO ESPECÍFICO PARA PÁGINA ROSADA          */
+/* ================================================= */
+
+.hero-rosada {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url('../img/fondorosada.png');
+}
+/* ================================================= */
+/*      FONDO ESPECÍFICO PARA PÁGINA PICANTE         */
+/* ================================================= */
+
+.hero-picante {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('../img/fondopicante.jpg');
+}
+/* ================================================= */
+/*      FONDO ESPECÍFICO PARA PÁGINA DE MIEL         */
+/* ================================================= */
+
+.hero-miel {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/fondomiel.jpg');
+}
+/* ========================================= */
+/*      ESTILOS PARA NUEVA SECCIÓN MISIÓN/VISIÓN */
+/* ========================================= */
+
+.mission-vision-grid {
+    display: grid;
+    /* Crea 2 columnas en escritorio, y 1 sola en móvil automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Espacio entre las tarjetas */
+}
+
+.vision-card {
+    background-color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.07); /* Sombra sutil */
+    text-align: center; /* Centra el icono y el título */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.vision-icon {
+    font-size: 3rem; /* Tamaño del icono */
+    color: var(--color-rojo); /* Usa el color principal de tu marca */
+    margin-bottom: 1.5rem;
+}
+
+.vision-card h2 {
+    margin-bottom: 1rem;
+}
+
+.vision-card p {
+    text-align: justify; /* ★★★ JUSTIFICA EL TEXTO COMO PEDISTE ★★★ */
+    color: #555;
+    line-height: 1.7; /* Aumenta el espacio entre líneas para mejor legibilidad */
+}
+/* ================================================================== */
+/*      ESTILOS MEJORADOS PARA PÁGINA "NOSOTROS" V2.0               */
+/* ================================================================== */
+
+/* --- Hero específico para la página Nosotros --- */
+.hero-nosotros {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/red-social.jpg');
+    background-position: center 30%;
+}
+
+/* --- Estructura de la Línea de Tiempo (MÁS ANCHA) --- */
+.timeline {
+    position: relative;
+    max-width: 1000px; /* ★★★ ANTES: 800px, AHORA: 1000px para más espacio ★★★ */
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: var(--color-rojo);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: white;
+    border: 4px solid var(--color-rojo);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline-item:nth-child(odd) { left: 0; }
+.timeline-item:nth-child(even) { left: 50%; }
+.timeline-item:nth-child(even)::after { left: -10px; }
+
+/* --- Contenido dentro de cada hito --- */
+.timeline-content {
+    /* ★★★ CAMBIO CLAVE ★★★ */
+    padding: 60px 35px 25px 35px; /* Aumentamos el padding SUPERIOR a 60px */
+    
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.timeline-year {
+    background-color: var(--color-rojo);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 25px; /* Alineado con el nuevo padding */
+    right: 35px;
+}
+
+/* --- Galería de Imágenes (MÁS GRANDES) --- */
+.timeline-gallery {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* ★★★ ANTES: 120px ★★★ */
+    gap: 10px;
+}
+.timeline-gallery img {
+    width: 100%;
+    height: 150px; /* ★★★ ANTES: 120px ★★★ */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* --- ANIMACIÓN PRINCIPAL DEL "CAJÓN" --- */
+.timeline-item .timeline-content {
+    opacity: 1;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.timeline-item.visible .timeline-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- ★★★ NUEVA ANIMACIÓN EN CASCADA PARA IMÁGENES ★★★ --- */
+.timeline-gallery img {
+    opacity: 1;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    /* Retraso inicial para que la animación empiece DESPUÉS de la del cajón */
+    transition-delay: 0.2s; 
+}
+
+.timeline-item.visible .timeline-gallery img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Efecto en cascada: cada imagen tiene un retraso un poco mayor */
+.timeline-item.visible .timeline-gallery img:nth-child(2) {
+    transition-delay: 0.3s;
+}
+.timeline-item.visible .timeline-gallery img:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+/* --- Diseño Responsivo para Móviles --- */
+@media screen and (max-width: 768px) {
+    .timeline::after { left: 15px; }
+    .timeline-item { width: 100%; padding-left: 50px; padding-right: 15px; }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) { left: 0; }
+    .timeline-item::after { left: 6px; }
+}
+/* ================================================================== */
+/*      ESTILOS PARA SECCIÓN INTRODUCTORIA DE "NOSOTROS"            */
+/* ================================================================== */
+
+.intro-history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* La columna de texto es un poco más ancha */
+    gap: 3rem;
+    align-items: center; /* Centra verticalmente ambas columnas */
+}
+
+/* --- Estilos para la imagen del equipo --- */
+.history-image-col img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+}
+
+/* --- Estilos para el "cajón" de texto --- */
+.history-text-panel {
+    background-color: #f8f9fa; /* Fondo gris sutil */
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--color-dorado); /* Borde de acento dorado */
+}
+
+.history-text-panel h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-verde-oscuro);
+}
+
+.history-text-panel p {
+    text-align: justify;
+    margin-bottom: 1rem;
+    color: #555;
+}
+.history-text-panel p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* --- Adaptación para Móviles --- */
+@media (max-width: 992px) {
+    .intro-history-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        gap: 2rem;
+    }
+}

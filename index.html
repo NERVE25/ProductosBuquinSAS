@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Buquin SAS - Salsas y Aderezos de Calidad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- ... otras etiquetas como <title> y <link> a tu css ... -->
+    
+    <!-- ★★★ AÑADE ESTA LÍNEA PARA LOS ÍCONOS ★★★ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- ... el resto de tu página ... -->
+
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <!-- COLOCA TU LOGO AQUÍ -->
+                <img src="img/logob.jpg" alt="Logo Productos Buquin SAS">
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="trabaja-con-nosotros.html">Trabaja con Nosotros</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero fondo-desvanecido">
+            <div class="container">
+                <h1>El sabor que une momentos</h1>
+                <p>Descubre la calidad y tradición en cada uno de nuestros productos. Salsas y aderezos hechos para tu mesa.</p>
+                <a href="productos.html" class="btn">Ver Productos</a>
+            </div>
+        </section>
+
+        <section class="about-preview section-padding">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <h2>Quiénes Somos</h2>
+                    <p>En nuestra compañia <strong>Productos Buquin SAS</strong>, nos dedicamos a la elaboracion de salsas que realzan el sabor de tus comidas. Con mas de 20 años de experiencia, combinamos ingredientes de alta calidad con recetas únicas para ofrecer productos irresistibles.</p>
+                    <a href="nosotros.html" class="btn-secondary">Conoce más</a>
+                </div>
+                <div class="about-image">
+                    <!-- Puedes poner aquí una imagen de tu planta o equipo -->
+                    <img src="img/amoramistad.jpg" alt="Planta de producción de Buquin SAS">
+                </div>
+            </div>
+        </section>
+
+        <section class="products-preview section-padding">
+            <div class="container">
+                <h2 class="text-center">Nuestros Productos Estrella</h2>
+                <div class="product-grid">
+                    <!-- Producto 1 -->
+                    <div class="product-card">
+                        <img src="img/tomate8.jpg" alt="Salsa con Tomate Buquin"loading="lazy">
+                        <h3>Salsa con Tomate</h3>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="product-card">
+                        <img src="img/bbq8.jpg" alt="Salsa BBQ Buquin"loading="lazy">
+                        <h3>Salsa BBQ</h3>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="product-card">
+                        <img src="img/miel8.jpg" alt="Sirope Sabor a Miel Buquin"loading="lazy">
+                        <h3>Sirope Sabor a Miel</h3>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 2rem;">
+                    <a href="productos.html" class="btn">Ver Catálogo Completo</a>
+                </div>
+            </div>
+            <!-- ======================= SECCIÓN DE LLAMADA A LA ACCIÓN (CTA) ======================= -->
+<section class="cta-section section-padding">
+    <div class="container">
+        <!-- Contenedor para los dos cajones -->
+        <div class="cta-container">
+
+            <!-- Cajón 1: Quiero ser Distribuidor -->
+            <div class="cta-box">
+                <!-- Icono representativo -->
+                <i class="fas fa-truck-fast cta-icon" style="color: var(--color-verde-oscuro);"></i>
+                
+                <h3 class="cta-title">¿Quieres ser Distribuidor?</h3>
+                
+                <p class="cta-description">
+                    Únete a nuestra red de socios y lleva el inconfundible sabor de Productos Buquin a cada rincón del país.
+                </p>
+                
+                <!-- Este botón llevará a la futura página de distribuidores -->
+                <a href="distribuidores.html" class="btn btn-distribuidor">Más Información</a>
+            </div>
+
+            <!-- Cajón 2: Quiero Comprar -->
+            <div class="cta-box">
+                <!-- Icono representativo -->
+                <i class="fas fa-shopping-basket cta-icon" style="color: var(--color-rojo);"></i>
+                
+                <h3 class="cta-title">¿Quieres Comprar?</h3>
+                
+                <p class="cta-description">
+                    Ideal para restaurantes, negocios o grandes consumidores. Realiza tus pedidos directamente con nosotros.
+                </p>
+                
+                <!-- Este botón llevará a la futura página de compras -->
+                <a href="comprar.html" class="btn btn-comprar">Realizar un Pedido</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- =================================================================================== -->
+    </main>
+
+    <footer class="footer">
+        <!-- ======================= SECCIÓN DE CONTACTO (NUEVA VERSIÓN) ======================= -->
+<div class="contact-details">
+    <!-- Item 1: Teléfono y WhatsApp -->
+    <div class="contact-item">
+        <h3>Teléfono y WhatsApp</h3>
+        <a href="https://wa.me/573176591699" class="contact-info-line" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>317 659 1699</span>
+        </a>
+    </div>
+
+    <!-- Item 2: Horario de Atención -->
+    <div class="contact-item">
+        <h3>Horario de Atención</h3>
+        <div class="contact-info-line">
+            <i class="fa-regular fa-clock"></i>
+            <span>Lunes a Viernes: 8:00 AM - 5:00 PM<br>Sábados: 9:00 AM - 1:00 PM</span>
+        </div>
+    </div>
+
+    <!-- Item 3: Ubicación -->
+    <div class="contact-item">
+        <h3>Ubicación</h3>
+        <!-- ★★★ INSTRUCCIONES IMPORTANTES ★★★
+            1. Ve a Google Maps y busca tu empresa.
+            2. Haz clic en "Compartir" y luego en "Insertar un mapa".
+            3. Copia el enlace que aparece en el atributo 'src' (empieza con https://www.google.com/maps/embed...).
+            4. REEMPLAZA EL ENLACE DE EJEMPLO DE ABAJO CON EL TUYO.
+        -->
+        <a href="https://maps.app.goo.gl/j5njSYXCNCiJFV2X6" target="_blank" class="contact-info-line">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Transversal 18i 5-05,<br>Soacha, Colombia</span>
+        </a>
+    </div>
+    <!-- Item 4: Redes Sociales -->
+    <div class="contact-item">
+        <h3>Redes Sociales</h3>
+        <div class="contact-info-line social-group">
+            <a href="https://instagram.com/PRODUCTOSBUQUIN" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/SALSASPRODUCTOSBUQUINS.A.S" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+</div>
+<!-- =================================================================================== -->
+            </div>
+            </div>
+        </div>
+        
+   </footer>
+
+<!-- ======================= BOTÓN FLOTANTE DE WHATSAPP ======================= -->
+<a href="https://wa.me/573176591699" class="whatsapp-flotante" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<!-- =================================================================================== -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
