@@ -1334,3 +1334,49 @@ a.product-link-card {
         gap: 2rem;
     }
 }
+/* ================================================= */
+/*      ESTILOS PARA MENÚ HAMBURGUESA Y MÓVIL        */
+/* ================================================= */
+
+/* --- Posición del menú fuera de la pantalla --- */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Empieza fuera de la pantalla a la izquierda */
+        top: 80px; /* Justo debajo del header */
+        flex-direction: column;
+        background-color: var(--color-blanco);
+        width: 100%;
+        height: calc(100vh - 80px);
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        gap: 2rem;
+        padding-top: 2rem;
+        justify-content: flex-start;
+    }
+
+    /* ★★★ ESTA ES LA REGLA CLAVE ★★★ */
+    /* Cuando el menú tiene la clase 'active', se desliza a la vista */
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* Muestra el botón de hamburguesa en móviles */
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* --- Animación del botón de hamburguesa a "X" --- */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+}
