@@ -65,42 +65,6 @@ h3 { font-size: 1.5rem; }
     height: 60px;
 }
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--color-verde-oscuro);
-    font-weight: 700;
-    padding: 5px 0;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.nav-menu a:hover, .nav-menu a.active {
-    color: var(--color-rojo);
-    border-bottom-color: var(--color-rojo);
-}
-
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-rojo);
-}
-
 /* === BOTONES === */
 .btn, .btn-secondary {
     display: inline-block;
@@ -260,45 +224,6 @@ h3 { font-size: 1.5rem; }
     font-weight: 700;
 }
 
-/* === RESPONSIVE (MENÚ MÓVIL) === */
-@media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .nav {
-        position: fixed;
-        top: 80px; /* Altura del header */
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background-color: var(--color-blanco);
-        transition: left 0.3s ease-in-out;
-    }
-
-    .nav.active {
-        left: 0;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        gap: 3rem;
-    }
-
-    .nav-menu a {
-        font-size: 1.5rem;
-    }
-    
-    .grid-2 {
-        grid-template-columns: 1fr;
-    }
-}
 /* === ESTILOS PÁGINAS INTERNAS (Nosotros, Productos) - VERSIÓN AJUSTADA === */
 .page-hero {
     /* --- 1. Tamaño y Alineación --- */
@@ -1334,49 +1259,58 @@ a.product-link-card {
         gap: 2rem;
     }
 }
-/* ================================================= */
-/*      ESTILOS PARA MENÚ HAMBURGUESA Y MÓVIL        */
-/* ================================================= */
+/* ================================================================== */
+/*      ESTILOS DEFINITIVOS Y COMPLETOS PARA MENÚ MÓVIL             */
+/* ================================================================== */
 
-/* --- Posición del menú fuera de la pantalla --- */
+/* --- Oculta la navegación y muestra la hamburguesa en móviles --- */
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%; /* Empieza fuera de la pantalla a la izquierda */
-        top: 80px; /* Justo debajo del header */
-        flex-direction: column;
-        background-color: var(--color-blanco);
-        width: 100%;
-        height: calc(100vh - 80px);
-        text-align: center;
-        transition: left 0.3s ease-in-out;
-        gap: 2rem;
-        padding-top: 2rem;
-        justify-content: flex-start;
+    .hamburger {
+        display: flex; /* Muestra el botón */
+        z-index: 1001; /* Se asegura de que esté por encima del menú */
     }
 
-    /* ★★★ ESTA ES LA REGLA CLAVE ★★★ */
-    /* Cuando el menú tiene la clase 'active', se desliza a la vista */
-    .nav-menu.active {
+    /* Estilos del contenedor NAV cuando está en modo móvil */
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Posición inicial: fuera de la pantalla */
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(5px);
+        transition: left 0.4s ease-in-out;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ★★★ LA REGLA MÁGICA: Cuando NAV tiene la clase .active, entra en la pantalla ★★★ */
+    .nav.active {
         left: 0;
     }
-
-    /* Muestra el botón de hamburguesa en móviles */
-    .hamburger {
-        display: flex;
+    
+    /* Estilos de la lista UL dentro del NAV */
+    .nav-menu {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .nav-menu a {
+        font-size: 1.8rem;
     }
 }
 
 /* --- Animación del botón de hamburguesa a "X" --- */
+.hamburger span {
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
 .hamburger.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
-    transition: transform 0.3s ease-in-out;
 }
 .hamburger.active span:nth-child(2) {
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
 }
 .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-    transition: transform 0.3s ease-in-out;
 }

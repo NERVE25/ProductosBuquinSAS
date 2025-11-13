@@ -1,22 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    // --- CÓDIGO CORREGIDO PARA EL MENÚ HAMBURGUESA ---
     const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav'); // ★★★ CAMBIO CLAVE: Buscamos '.nav' en lugar de '.nav-menu' ★★★
+    const nav = document.querySelector('.nav');
 
-    // Se asegura de que el código solo se ejecute si encuentra los elementos
     if (hamburger && nav) {
         hamburger.addEventListener('click', () => {
-            // Alterna la clase 'active' en el botón de hamburguesa
             hamburger.classList.toggle('active');
-            // Alterna la clase 'active' en el contenedor de la navegación <nav>
-            nav.classList.toggle('active'); // ★★★ CAMBIO CLAVE: Aplicamos la clase a '.nav' ★★★
+            nav.classList.toggle('active');
         });
     }
 
-    // --- CÓDIGO PARA LA ANIMACIÓN DE LA LÍNEA DE TIEMPO (Sin cambios) ---
+    // El código de la línea de tiempo se queda igual
     const timelineItems = document.querySelectorAll('.timeline-item');
-
     if (timelineItems.length > 0) {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -25,13 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
-            threshold: 0.1
-        });
-
-        timelineItems.forEach(item => {
-            observer.observe(item);
-        });
+        }, { threshold: 0.1 });
+        timelineItems.forEach(item => { observer.observe(item); });
     }
-
 });
