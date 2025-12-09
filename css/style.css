@@ -1198,9 +1198,11 @@ a.product-link-card {
 }
 .timeline-gallery img {
     width: 100%;
-    height: 150px; /* ★★★ ANTES: 120px ★★★ */
-    object-fit: cover;
+    height: 150px;
+    object-fit: contain; /* ★★★ EL CAMBIO CLAVE: Muestra la imagen completa ★★★ */
+    background-color: #f0f0f0; /* Un fondo gris muy claro para el espacio sobrante */
     border-radius: 5px;
+    padding: 5px; /* Opcional: añade un pequeño margen interno */
 }
 
 /* --- ANIMACIÓN PRINCIPAL DEL "CAJÓN" --- */
