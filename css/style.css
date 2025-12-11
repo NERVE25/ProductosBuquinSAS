@@ -20,7 +20,14 @@ body {
     color: var(--color-texto);
     line-height: 1.6;
 }
+/* ========================================= */
+/*      REGLAS UNIVERSALES DE RESPONSIVIDAD  */
+/* ========================================= */
 
+img {
+    max-width: 100%; /* La imagen nunca se desbordará de su contenedor */
+    height: auto;    /* La altura se ajustará automáticamente para no deformar la imagen */
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1351,4 +1358,59 @@ a.product-link-card {
 }
 .hamburger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+}
+/* ================================================================== */
+/*      MEDIA QUERY MAESTRA PARA DISPOSITIVOS MÓVILES               */
+/* ================================================================== */
+/* Estas reglas se aplicarán a cualquier pantalla que tenga 768px de ancho o menos */
+
+@media (max-width: 768px) {
+
+    /* --- AJUSTES GENERALES DE TAMAÑO Y ESPACIO --- */
+    
+    h1 { font-size: 2.2rem; } /* Hacemos los títulos principales más pequeños */
+    h2 { font-size: 1.8rem; } /* Hacemos los subtítulos más pequeños */
+    
+    .section-padding {
+        padding: 60px 0; /* Reducimos el espacio vertical entre secciones */
+    }
+
+    /* --- AJUSTES DE COLUMNAS (HACEMOS QUE TODO SEA 1 SOLA COLUMNA) --- */
+    
+    /* Para layouts generales de 2 columnas */
+    .grid-2,
+    .cta-container,
+    .mission-vision-grid,
+    .intro-history-grid,
+    .form-layout-grid {
+        grid-template-columns: 1fr; /* Forzamos a que todo sea una sola columna */
+        gap: 2rem;
+    }
+
+    /* --- AJUSTES ESPECÍFICOS DE PÁGINAS --- */
+
+    /* Hero de la página de inicio */
+    .hero {
+        padding: 80px 0;
+    }
+
+    /* Heroes de las páginas de producto */
+    .product-hero {
+        min-height: 30vh; /* Hacemos los banners un poco más bajos en móvil */
+    }
+    .product-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Línea de tiempo en la página "Nosotros" */
+    .timeline::after { left: 20px; }
+    .timeline-item { width: 100%; padding-left: 50px; padding-right: 15px; }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) { left: 0; }
+    .timeline-item::after { left: 11px; }
+
+    /* Alineación del texto en el formulario de distribuidores */
+    .form-info-col {
+        text-align: center;
+    }
 }
